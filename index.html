@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סדנת AI לילדים 🤖 חופשת פסח — חינם!</title>
+    <meta name="description" content="סדנה חינמית בזום לילדים מגיל 9+. יוצרים תמונות, סרטונים, ספרון, אתר ומשחקים עם בינה מלאכותית!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2a5e 50%, #0d1f4b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; }
+
+        .context-banner {
+            background: linear-gradient(90deg, rgba(255,200,50,0.15), rgba(255,150,50,0.15));
+            border: 1px solid rgba(255,200,50,0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin: 10px 0 20px;
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: right;
+            color: #ffd88a;
+        }
+        .context-banner strong { color: #ffd700; }
+
+        .hero-img { width: 100%; max-width: 380px; border-radius: 20px; margin: 10px auto 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+
+        .title-section { margin: 15px 0 20px; }
+        .title-top { font-size: 1em; color: #aaa; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+        h1 {
+            font-size: 2.8em;
+            font-weight: 900;
+            margin: 5px 0;
+            color: white;
+            text-shadow: 0 0 30px rgba(0,210,255,0.3);
+        }
+        h1 span {
+            background: linear-gradient(90deg, #00d2ff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { font-size: 1.4em; color: #ffd700; font-weight: 700; }
+        .subtitle-small { font-size: 1em; color: #aaa; margin-top: 5px; }
+
+        .info-box {
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .info-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+        }
+        .info-card .emoji { font-size: 1.8em; display: block; margin-bottom: 5px; }
+        .info-card .label { font-size: 0.85em; color: #aaa; }
+        .info-card .value { font-size: 1.1em; font-weight: 700; }
+
+        .features { text-align: right; }
+        .feature {
+            display: flex; align-items: center; gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 1.1em;
+        }
+        .feature:last-child { border-bottom: none; }
+        .feature .emoji { font-size: 1.4em; min-width: 35px; text-align: center; }
+        .feature strong { color: #00d2ff; }
+
+        .video-section { margin: 25px 0; }
+        .video-section h3 { font-size: 1.1em; color: #a855f7; margin-bottom: 12px; }
+        .video-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .video-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 12px;
+            padding: 10px 16px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+        .video-link:hover { background: rgba(168, 85, 247, 0.35); transform: translateY(-2px); }
+
+        .requirements {
+            display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .req {
+            background: rgba(0,210,255,0.08);
+            border: 1px solid rgba(0,210,255,0.2);
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-size: 0.85em;
+        }
+
+        .cta-section { margin: 25px 0 10px; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            font-size: 1.4em;
+            font-weight: 900;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5); }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.6); }
+        }
+
+        .limited { color: #ff6b6b; font-size: 1.05em; font-weight: 700; margin-bottom: 15px; }
+        .cta-note { color: #888; font-size: 0.85em; margin-top: 10px; }
+
+        .teacher { color: #aaa; font-size: 0.9em; margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2em; }
+            .cta-btn { font-size: 1.2em; padding: 15px 35px; }
+            .info-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="context-banner">
+            ✨ בתקופה הזו <strong>הילדים בבית</strong> — חופשת פסח, המצב הביטחוני, מסכים בלי סוף.<br>
+            בואו ניתן להם <strong>ליצור משהו מדהים</strong> — במקום רק לצרוך תוכן.
+        </div>
+
+        <img src="poster.jpg" alt="סדנת AI לילדים" class="hero-img">
+
+        <div class="title-section">
+            <div class="title-top">חופשת פסח 2026</div>
+            <h1>סדנת <span>AI</span> לילדים</h1>
+            <div class="subtitle">🎁 חינם לגמרי!</div>
+            <div class="subtitle-small">שעה וחצי של יצירה עם בינה מלאכותית</div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="emoji">📅</span>
+                    <span class="label">מתי</span>
+                    <span class="value">מחר (יום שני)</span>
+                </div>
+                <div class="info-card">
+                    <span class="emoji">⏰</span>
+                    <span class="label">שעה</span>
+                    <span class="value">16:00</span>
+                </div>
+                <div class="info-card">
+                    <span class="emoji">💻</span>
+                    <span class="label">איפה</span>
+                    <span class="value">בזום מהבית</span>
+                </div>
+                <div class="info-card">
+                    <span class="emoji">👦</span>
+                    <span class="label">גילאים</span>
+                    <span class="value">9+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box features">
+            <h3 style="text-align:center; margin-bottom: 15px; color: #ffd700;">🎨 מה הילדים ייצרו בפועל?</h3>
+            <div class="feature"><span class="emoji">🖼️</span> <span>תמונות מטורפות עם <strong>בינה מלאכותית</strong></span></div>
+            <div class="feature"><span class="emoji">🎬</span> <span>סרטון <strong>אנימציה</strong></span></div>
+            <div class="feature"><span class="emoji">📖</span> <span>ספרון אישי <strong>שלהם</strong></span></div>
+            <div class="feature"><span class="emoji">🌐</span> <span><strong>אתר</strong> משלהם</span></div>
+            <div class="feature"><span class="emoji">🎮</span> <span><strong>משחקים</strong></span></div>
+            <div class="feature"><span class="emoji">🔥</span> <span>ככל שנספיק!</span></div>
+        </div>
+
+        <div class="video-section">
+            <h3>🎬 רוצים טעימה? ככה נראה AI בפעולה:</h3>
+            <div class="video-links">
+                <a href="https://youtu.be/2lHr8CQP2N8" target="_blank" class="video-link">🐸 מכת צפרדע</a>
+                <a href="https://youtu.be/YdEFRCZKmnk" target="_blank" class="video-link">🩸 המכה הראשונה</a>
+            </div>
+        </div>
+
+        <div class="requirements">
+            <span class="req">✅ בלי ניסיון קודם</span>
+            <span class="req">💻 מחשב + זום</span>
+            <span class="req">📧 חשבון גוגל פעיל</span>
+        </div>
+
+        <div class="cta-section">
+            <div class="limited">⚡ מקומות מוגבלים!</div>
+            <a href="https://chat.whatsapp.com/DZ5k7o9TVLQExKIFSOq0ay" class="cta-btn">📱 הצטרפו לקבוצת הסדנה!</a>
+            <p class="cta-note">הצטרפו לקבוצת הווטסאפ של הסדנה →<br>שם תקבלו את הקישור לזום ועדכונים</p>
+        </div>
+
+        <div class="teacher">
+            👨‍🏫 <a href="https://shimshon.ai" target="_blank" style="color: #00d2ff; text-decoration: none; font-weight: 700;">שמשון ג׳קוב</a> — מחנך, מרצה ומומחה לבינה מלאכותית<br>
+            <span style="font-size: 0.85em; color: #888;">(🏆 זוכה חידון התנ״ך העולמי למבוגרים תשפ״ה)</span>
+        </div>
+
+        <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.04); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+            <p style="color: #aaa; font-size: 0.9em;">💬 רוצים עדכונים שוטפים על AI?<br>
+            <a href="https://chat.whatsapp.com/FSV8LARclvl9tX5P4xOHZU" style="color: #00d2ff; text-decoration: none;">הצטרפו לקבוצה «בינה מלאכותית — בדקה 1» →</a></p>
+        </div>
+    </div>
+</body>
+</html>
